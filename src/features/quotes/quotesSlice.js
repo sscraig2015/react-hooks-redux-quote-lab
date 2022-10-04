@@ -5,5 +5,13 @@
 const initialState = [];
 
 export default function quotesReducer(state = initialState, action) {
-  return state;
+
+  switch(action.type) {
+    case "quotes/add":
+      return [...state, action.payload] 
+
+  default:
+    return state;
+  }
+
 }
